@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Schedule App - 予定詳細</title>
+</head>
+<body>
+  <h1>予定詳細</h1>
+  <p><strong><%= @schedule.title %></strong></p>
+  <p>開始日: <%= @schedule.start_date.strftime('%Y/%m/%d') %></p>
+  <p>終了日: <%= @schedule.end_date.strftime('%Y/%m/%d') %></p>
+  <p>終日: <%= @schedule.all_day ? '○' : '' %></p>
+  <p>スケジュールメモ: <%= @schedule.schedule_memo %></p>
+  <%= link_to '編集', edit_schedule_path(@schedule) %>
+  <%= link_to '戻る', schedules_path %>
+</body>
+</html>
