@@ -45,12 +45,12 @@ class SchedulesController < ApplicationController
     # 削除アクション
     def destroy
       @schedule = Schedule.find(params[:id])
-      if @schedule.destroy(schedule_params)
+      if @schedule.destroy
         flash[:notice] = 'Schedule deleted successfully.'
         redirect_to schedules_path
       else
         flash[:alert] = 'Failed to deleted schedule.'
-        render 'edit'
+        render 'destroy'
       end
     end
 
