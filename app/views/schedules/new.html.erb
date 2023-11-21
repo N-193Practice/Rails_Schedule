@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Schedule App - 予定新規追加</title>
+</head>
+<body>
+  <h1>新規予定追加</h1>
+  <%= form_for @schedule do |f| %>
+    <div class="form-field">
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+    </div>
+    <div class="form-field">
+      <%= f.label :start_date %>
+      <%= f.date_field :start_date %>
+    </div>
+    <div class="form-field">
+      <%= f.label :end_date %>
+      <%= f.date_field :end_date %>
+    </div>
+    <div class="form-field">
+      <%= f.label :all_day %>
+      <%= f.check_box :all_day %>
+    </div>
+    <div class="form-field">
+      <%= f.label :schedule_memo %>
+      <%= f.text_area :schedule_memo %>
+    </div>
+    <%= f.submit '保存' %>
+  <% end %>
+  <%= link_to '戻る', schedules_path %>
+</body>
+</html>

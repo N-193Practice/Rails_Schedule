@@ -11,6 +11,10 @@
   </head>
 
   <body>
-    <%= yield %>
+  <%= yield %>
+  <%# Flash Message %>
+  <% flash.each do |key, value| %>
+    <div class="flash <%= key %>"><%= value %></div>
+  <% end %>  
   </body>
 </html>
