@@ -12,6 +12,7 @@ class SchedulesController < ApplicationController
       @schedule = Schedule.new
     end
 
+    # # FlashMessage when create/edit
     def create
       @schedule = Schedule.new(schedule_params)
       if @schedule.save
