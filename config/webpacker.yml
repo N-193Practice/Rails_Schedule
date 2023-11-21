@@ -18,6 +18,9 @@ default: &default
   # Extract and emit a css file
   extract_css: false
 
+  # to be able to resolve assets stored in the app/assets folder.
+  resolved_paths: ['app/assets']
+
   static_assets_extensions:
     - .jpg
     - .jpeg

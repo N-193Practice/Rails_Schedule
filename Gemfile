@@ -28,15 +28,6 @@ gem 'jbuilder', '~> 2.7'
 # add date_validates_method
 gem 'date_validator'
 
-# bootstrap For Flash Message
-gem 'bootstrap', '~> 5.3', '>= 5.3.2'
-
-# jQuery For Flash Message
-gem 'jquery-rails'
-
-# Popper.js For Flash Message
-gem 'popper_js', '>= 2.10.2'
-
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 
