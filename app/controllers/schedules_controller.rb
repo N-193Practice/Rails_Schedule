@@ -18,7 +18,7 @@ class SchedulesController < ApplicationController
     def create
       @schedule = Schedule.new(schedule_params)
       if @schedule.save
-        flash[:notice] = 'Schedule created successfully.'
+        flash[:success] = 'Schedule created successfully.'
         redirect_to schedules_path
       else
         flash[:alert] = 'Failed to create schedule.'
@@ -34,7 +34,7 @@ class SchedulesController < ApplicationController
     def update
       @schedule = Schedule.find(params[:id])
       if @schedule.update(schedule_params)
-        flash[:notice] = 'Schedule updated successfully.'
+        flash[:success] = 'Schedule updated successfully.'
         redirect_to schedules_path
       else
         flash[:alert] = 'Failed to update schedule.'
@@ -46,7 +46,7 @@ class SchedulesController < ApplicationController
     def destroy
       @schedule = Schedule.find(params[:id])
       if @schedule.destroy
-        flash[:notice] = 'Schedule deleted successfully.'
+        flash[:success] = 'Schedule deleted successfully.'
         redirect_to schedules_path
       else
         flash[:alert] = 'Failed to deleted schedule.'
